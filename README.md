@@ -21,6 +21,8 @@ To Use
 ------
 
 <pre>
+	var rfxcom = require("rfxcomdecode");
+	
 	rfxcom.on("open", function () {
 	  rfxcom.on('data', function(data) {
 		  console.log('[RFXCOM] Data : ' + data.toString());
