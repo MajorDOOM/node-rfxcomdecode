@@ -1,0 +1,1673 @@
+{
+   "0":{
+      "0":"mode command",
+      "name":"Interface Control",
+      "length":13,
+      "data":{
+         "Command":{
+            "type":"direct",
+            "byte":0,
+            "0":"Reset the receiver/transceiver. No answer is transmitted!",
+            "1":"not used.",
+            "2":"Get Status, return firmware versions and configuration of the interface.",
+            "3":"Set Mode msg1-msg5, return also the firmware version and configuration of the interface.",
+            "6":"save receiving modes of the receiver/transceiver in non-volatile memory",
+            "7":"not used",
+            "8":"T1 – for internal use by RFXCOM",
+            "9":"T2 – for internal use by RFXCOM",
+            "80":"select 310MHz in the 310/315 transceiver",
+            "81":"select 315MHz in the 310/315 transceiver",
+            "82":"not used",
+            "83":"not used",
+            "84":"not used",
+            "85":"select 868.00MHz in the 868 transceiver",
+            "86":"select 868.00MHz FSK in the 868 transceiver",
+            "87":"select 868.30MHz in the 868 transceiver",
+            "88":"select 868.30MHz FSK in the 868 transceiver",
+            "89":"select 868.35MHz in the 868 transceiver",
+            "90":"select 868.35MHz FSK in the 868 transceiver",
+            "91":"select 868.95MHz in the 868 transceiver"
+         },
+         "Receiver/transceiver type":{
+            "type":"direct",
+            "byte":1,
+            "80":"RFXtrx315 310MHz",
+            "81":"RFXtrx315 315MHz",
+            "82":"RFXrec433 433.92MHz",
+            "83":"RFXtrx433 433.92MHz",
+            "85":"RFXtrx868 868.00MHz",
+            "86":"RFXtrx868 868.00MHz FSK",
+            "87":"RFXtrx868 868.30MHz",
+            "88":"RFXtrx868 868.30MHz FSK",
+            "89":"RFXtrx868 868.35MHz",
+            "90":"RFXtrx868 868.35MHz FSK",
+            "91":"RFXtrx868 868.95MHz"
+         },
+         "Enabled protocols1":{
+            "type":"bit",
+            "byte":3,
+            "0":"AE Blyss",
+            "1":"Rubicson",
+            "2":"FineOffset/Viking",
+            "3":"Lighting 4",
+            "4":"RSL",
+            "5":"Byron SX",
+            "6":"RFU6",
+            "7":"Enable display of undecoded"
+         },
+         "Enabled protocols2":{
+            "type":"bit",
+            "byte":4,
+            "0":"Mertik",
+            "1":"AD LighwaveRF",
+            "2":"Hideki/UPM",
+            "3":"La Crosse",
+            "4":"FS20",
+            "5":"ProGuard",
+            "6":"BlindsT0",
+            "7":"BlindsT1/T2/T3/T4"
+         },
+         "Enabled protocols3":{
+            "type":"bit",
+            "byte":5,
+            "0":"X10",
+            "1":"ARC",
+            "2":"AC",
+            "3":"HomeEasy EU",
+            "4":"Meiantech",
+            "5":"Oregon Scientific",
+            "6":"ATI",
+            "7":"Visionic"
+         }
+      }
+   },
+   "1":{
+      "0":"response on a mode command",
+      "255":"wrong command received from the application",
+      "name":"Interface Message",
+      "length":13,
+      "data":{
+         "Command":{
+            "type":"direct",
+            "byte":0,
+            "0":"Reset the receiver/transceiver. No answer is transmitted!",
+            "1":"not used.",
+            "2":"Get Status, return firmware versions and configuration of the interface.",
+            "3":"Set Mode msg1-msg5, return also the firmware version and configuration of the interface.",
+            "6":"save receiving modes of the receiver/transceiver in non-volatile memory",
+            "7":"not used",
+            "8":"T1 – for internal use by RFXCOM",
+            "9":"T2 – for internal use by RFXCOM",
+            "80":"select 310MHz in the 310/315 transceiver",
+            "81":"select 315MHz in the 310/315 transceiver",
+            "82":"not used",
+            "83":"not used",
+            "84":"not used",
+            "85":"select 868.00MHz in the 868 transceiver",
+            "86":"select 868.00MHz FSK in the 868 transceiver",
+            "87":"select 868.30MHz in the 868 transceiver",
+            "88":"select 868.30MHz FSK in the 868 transceiver",
+            "89":"select 868.35MHz in the 868 transceiver",
+            "90":"select 868.35MHz FSK in the 868 transceiver",
+            "91":"select 868.95MHz in the 868 transceiver"
+         },
+         "Receiver/Transceiver type":{
+            "type":"direct",
+            "byte":1,
+            "80":"310MHz",
+            "81":"315MHz",
+            "82":"433.92MHz receiver only",
+            "83":"433.92MHz transceiver",
+            "85":"868.00MHz",
+            "86":"868.00MHz FSK",
+            "87":"868.30MHz",
+            "88":"868.30MHz FSK",
+            "89":"868.35MHz",
+            "90":"868.35MHz FSK",
+            "91":"868.95MHz"
+         },
+         "Firmware":{
+            "type":"value",
+            "byte":2
+         },
+         "Enabled protocols1":{
+            "type":"bit",
+            "byte":3,
+            "0":"AE Blyss",
+            "1":"Rubicson",
+            "2":"FineOffset/Viking",
+            "3":"Lighting 4",
+            "4":"RSL",
+            "5":"Byron SX",
+            "6":"RFU6",
+            "7":"Enable display of undecoded"
+         },
+         "Enabled protocols2":{
+            "type":"bit",
+            "byte":4,
+            "0":"Mertik",
+            "1":"AD LighwaveRF",
+            "2":"Hideki/UPM",
+            "3":"La Crosse",
+            "4":"FS20",
+            "5":"ProGuard",
+            "6":"BlindsT0",
+            "7":"BlindsT1/T2/T3/T4"
+         },
+         "Enabled protocols3":{
+            "type":"bit",
+            "byte":5,
+            "0":"X10",
+            "1":"ARC",
+            "2":"AC",
+            "3":"HomeEasy EU",
+            "4":"Meiantech",
+            "5":"Oregon Scientific",
+            "6":"ATI",
+            "7":"Visionic"
+         }
+      }
+   },
+   "2":{
+      "0":"error, receiver did not lock msg not used",
+      "1":"transmitter response",
+      "name":"Receiver/transmitter Message",
+      "length":4,
+      "data":{
+         "State":{
+            "type":"direct",
+            "byte":0,
+            "0":"ACK, transmit OK",
+            "1":"ACK, but transmit started after 3 seconds delay anyway with RF receive data",
+            "2":"NAK, transmitter did not lock on the requested transmit frequency",
+            "3":"NAK, AC address zero in id1-id4 not allowed"
+         }
+      }
+   },
+   "3":{
+      "0":"ac",
+      "1":"arc",
+      "2":"ati",
+      "3":"hideki/upm",
+      "4":"lacrosse/viking",
+      "5":"ad",
+      "6":"mertik",
+      "7":"oregon1",
+      "8":"oregon2",
+      "9":"oregon3",
+      "10":"proguard",
+      "11":"visonic",
+      "12":"nec",
+      "13":"fs20",
+      "14":"reserved",
+      "15":"blinds",
+      "16":"rubicson",
+      "17":"ae",
+      "18":"fineoffset",
+      "name":"Undecoded RF Message",
+      "length":36,
+      "data":{
+
+      }
+   },
+   "16":{
+      "0":"X10 lighting",
+      "1":"ARC",
+      "2":"ELRO AB400D (Flamingo)",
+      "3":"Waveman",
+      "4":"Chacon EMW200",
+      "5":"IMPULS",
+      "6":"RisingSun",
+      "7":"Philips SBC",
+      "8":"Energenie ENER010",
+      "name":"Lighting1",
+      "length":7,
+      "data":{
+         "Housecode":{
+            "type":"value",
+            "byte":0
+         },
+         "Unitcode":{
+            "type":"value",
+            "byte":1
+         },
+         "Command":{
+            "type":"direct",
+            "byte":2,
+            "0":"Off",
+            "1":"On",
+            "2":"Dim",
+            "3":"Bright",
+            "5":"All/group Off",
+            "6":"All/group On",
+            "7":"Chime",
+            "255":"Illegal cmnd received"
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":3,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "17":{
+      "0":"AC",
+      "1":"HomeEasy EU",
+      "2":"ANSLUT",
+      "name":"Lighting2 (AC,HEU)",
+      "length":11,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":4
+         },
+         "Unitcode":{
+            "type":"value",
+            "byte":4
+         },
+         "Command":{
+            "type":"direct",
+            "byte":5,
+            "0":"Off",
+            "1":"On",
+            "2":"Set level",
+            "3":"Group Off",
+            "4":"Group On",
+            "5":"Set group level"
+         },
+         "Level":{
+            "type":"value",
+            "byte":6
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":7,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "18":{
+      "0":"Ikea Koppla",
+      "name":"Lighting3",
+      "length":8,
+      "data":{
+         "System":{
+            "type":"value",
+            "byte":0
+         },
+         "Channel1":{
+            "type":"bit",
+            "byte":1,
+            "0":"Channel 1",
+            "1":"Channel 2",
+            "2":"Channel 3",
+            "3":"Channel 4",
+            "4":"Channel 5",
+            "5":"Channel 6",
+            "6":"Channel 7",
+            "7":"Channel 8"
+         },
+         "Channel2":{
+            "type":"bit",
+            "byte":2,
+            "0":"Channel 9",
+            "1":"Channel 10"
+         },
+         "Command":{
+            "type":"direct",
+            "byte":3,
+            "0":"Bright",
+            "8":"Dim",
+            "16":"On",
+            "17":"level 1",
+            "18":"level 2",
+            "19":"level 3",
+            "20":"level 4",
+            "21":"level 5",
+            "22":"level 6",
+            "23":"level 7",
+            "24":"level 8",
+            "25":"level 9",
+            "26":"Off",
+            "28":"Program"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":4,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":4,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "19":{
+      "0":"PT2262",
+      "name":"Lighting4",
+      "length":9,
+      "data":{
+         "Command":{
+            "type":"value",
+            "byte":0,
+            "nbyte":3
+         },
+         "Pulse":{
+            "type":"value",
+            "byte":3,
+            "nbyte":2,
+            "div":4,
+            "unit":"µs"
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":5,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "20":{
+      "0":"LightwaveRF, Siemens",
+      "1":"EMW100 GAO/Everflourish",
+      "2":"BBSB new types",
+      "3":"MDREMOTE LED dimmer",
+      "4":"Conrad RSL2",
+      "5":"Livolo",
+      "6":"RGB TRC02",
+      "name":"Lighting5 (AD)",
+      "length":10,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":3
+         },
+         "UnitCode":{
+            "type":"value",
+            "byte":3
+         },
+         "Command":{
+            "type":"value",
+            "byte":4
+         },
+         "Level":{
+            "type":"value",
+            "byte":5
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":6,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "21":{
+      "0":"Blyss",
+      "name":"Lighting6 (AE)",
+      "length":11,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "GroupCode":{
+            "type":"value",
+            "byte":2
+         },
+         "UnitCode":{
+            "type":"value",
+            "byte":3
+         },
+         "Command":{
+            "type":"direct",
+            "byte":4,
+            "0":"On",
+            "1":"Off",
+            "2":"Group On",
+            "3":"Group Off"
+         },
+         "CmndSeqNbr":{
+            "type":"value",
+            "byte":5
+         },
+         "Seqnbr2":{
+            "type":"value",
+            "byte":6
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":7,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "22":{
+      "0":"Byron SX",
+      "name":"Chime",
+      "length":7,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Sound":{
+            "type":"direct",
+            "byte":2,
+            "1":"Tubular 3 notes",
+            "2":"Solo",
+            "3":"Big Ben",
+            "5":"Tubular 2 notes",
+            "6":"Tubular 2 notes",
+            "9":"Solo",
+            "13":"Tubular 3 notes",
+            "14":"Big Ben"
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":3,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "23":{
+      "0":"Siemens SF01 - LF959RA50/LF259RB50/LF959RB50 extractor hood",
+      "name":"Fan",
+      "length":7,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Command":{
+            "type":"direct",
+            "byte":2,
+            "1":"Timer",
+            "2":"-",
+            "3":"Learn",
+            "4":"+",
+            "5":"Confirm",
+            "6":"Light",
+            "7":"On",
+            "8":"Off"
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":3,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "24":{
+      "0":"Harrison Curtain",
+      "name":"Curtain1",
+      "length":7,
+      "data":{
+         "HouseCode":{
+            "type":"value",
+            "byte":0
+         },
+         "UnitCode":{
+            "type":"value",
+            "byte":1
+         },
+         "Command":{
+            "type":"direct",
+            "byte":2,
+            "0":"Open",
+            "1":"Close",
+            "2":"Stop",
+            "3":"Program"
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":3,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "25":{
+      "0":"BlindsT0 = RollerTrol, Hasta new",
+      "1":"BlindsT1 = Hasta old",
+      "2":"BlindsT2 = A-OK RF01",
+      "3":"BlindsT3 = A-OK AC114",
+      "4":"BlindsT4 = Raex YR1326",
+      "5":"BlindsT5 = Media Mount",
+      "name":"Blinds1",
+      "length":9,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":3
+         },
+         "UnitCode":{
+            "type":"value",
+            "byte":3
+         },
+         "Command":{
+            "type":"direct",
+            "byte":4,
+            "0":"Open",
+            "1":"Close",
+            "2":"Stop",
+            "3":"Confirm/Pair",
+            "4":"Set Limit",
+            "5":"Set Lower Limit",
+            "6":"Delete Limits",
+            "7":"Change Direction",
+            "8":"Left",
+            "9":"Right"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":5,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":5,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "32":{
+      "0":"X10 security door/window sensor",
+      "1":"X10 security motion sensor",
+      "2":"X10 security remote (no alive packets)",
+      "3":"KD101 (no alive packets)",
+      "4":"Visonic PowerCode door/window sensor – primary contact (with alive packets)",
+      "5":"Visonic PowerCode motion sensor (with alive packets)",
+      "6":"Visonic CodeSecure (no alive packets)",
+      "7":"Visonic PowerCode door/window sensor – auxiliary contact (no alive packets)",
+      "8":"Meiantech",
+      "9":"SA30 (no alive packets)",
+      "name":"Security1",
+      "length":8,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":3
+         },
+         "Status":{
+            "type":"direct",
+            "byte":3,
+            "0":"normal",
+            "1":"normal delayed",
+            "2":"alarm",
+            "3":"alarm delayed",
+            "4":"motion",
+            "5":"no motion",
+            "6":"panic",
+            "7":"end panic",
+            "8":"IR",
+            "9":"arm away",
+            "10":"arm away delayed",
+            "11":"arm home",
+            "12":"arm home delayed",
+            "13":"disarm",
+            "16":"light 1 off",
+            "17":"light 1 on",
+            "18":"light 2 off",
+            "19":"light 2 on",
+            "20":"dark detected",
+            "21":"light detected",
+            "22":"batlow SD18, CO18",
+            "23":"pair KD101/SA30",
+            "128":"normal + tamper",
+            "129":"normal delayed + tamper",
+            "130":"alarm + tamper",
+            "131":"alarm delayed + tamper",
+            "132":"motion + tamper",
+            "133":"no motion + tamper"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":4,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":4,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "40":{
+      "0":"X10 Ninja",
+      "name":"Camera1",
+      "length":6,
+      "data":{
+         "HouseCode":{
+            "type":"value",
+            "byte":0
+         },
+         "Command":{
+            "type":"direct",
+            "byte":1,
+            "0":"Left",
+            "1":"Right",
+            "2":"Up",
+            "3":"Down",
+            "4":"Position 1",
+            "5":"Program Position 1",
+            "6":"Position 2",
+            "7":"Program Position 2",
+            "8":"Position 3",
+            "9":"Program Position 3",
+            "10":"Position 4",
+            "11":"Program Position 4",
+            "12":"Center",
+            "13":"Program Center Position",
+            "14":"Sweep",
+            "15":"Program Sweep"
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":2,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "48":{
+      "0":"ATI Remote Wonder",
+      "1":"ATI Remote Wonder Plus",
+      "2":"Medion Remote",
+      "3":"X10 PC Remote",
+      "4":"ATI Remote Wonder II",
+      "name":"Remote control and IR",
+      "length":6,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0
+         },
+         "Command":{
+            "type":"value",
+            "byte":1
+         },
+         "Toggle":{
+            "type":"value",
+            "byte":2,
+            "mask":1
+         },
+         "Command Type:":{
+            "type":"value",
+            "byte":2,
+            "mask":14,
+            "rdecal":1
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":2,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "64":{
+      "0":"Digimax, TLX7506",
+      "1":"Digimax with short format (no set point)",
+      "name":"Thermostat1",
+      "length":9,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Temperature":{
+            "type":"value",
+            "byte":2,
+            "unit":"°C"
+         },
+         "Set_point":{
+            "type":"value",
+            "byte":3,
+            "unit":"°C"
+         },
+         "Status":{
+            "type":"direct",
+            "byte":4,
+            "0":"No status available",
+            "1":"Demand",
+            "2":"No demand",
+            "3":"Initializing"
+         },
+         "Mode":{
+            "type":"value",
+            "byte":5,
+            "mask":1
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":5,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "65":{
+      "0":"HE105",
+      "1":"RTS10, RFS10, TLX1206",
+      "name":"Thermostat2",
+      "length":9,
+      "data":{
+         "UnitCode":{
+            "type":"value",
+            "byte":0
+         },
+         "Command":{
+            "type":"direct",
+            "byte":1,
+            "0":"Off",
+            "1":"On",
+            "2":"Program RTS10"
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":2,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "66":{
+      "0":"Mertik G6R-H4T1",
+      "1":"Mertik G6R-H4TB / G6-H4T / G6R-H4T21-Z22",
+      "name":"Thermostat3",
+      "length":8,
+      "data":{
+         "UnitCode":{
+            "type":"value",
+            "byte":0,
+            "nbyte":3
+         },
+         "Command":{
+            "type":"direct",
+            "byte":3,
+            "0":"Off",
+            "1":"On",
+            "2":"Up",
+            "3":"Down",
+            "4":"Run Up/2nd Off",
+            "5":"Run Down/2nd On",
+            "6":"Stop"
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":4,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "78":{
+      "1":"Maverick ET-732",
+      "name":"BBQ Temperature sensors",
+      "length":10,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Temperature food":{
+            "type":"value",
+            "byte":2,
+            "nbyte":2,
+            "unit":"°C"
+         },
+         "Temperature BBQ":{
+            "type":"value",
+            "byte":4,
+            "nbyte":2,
+            "unit":"°C"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":6,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":6,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "79":{
+      "1":"Alecto WS1200",
+      "name":"Temperature and rain sensors",
+      "length":10,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Temperature":{
+            "type":"value",
+            "byte":2,
+            "nbyte":2,
+            "sign":1,
+            "div":10,
+            "unit":"°C"
+         },
+         "RainTotal":{
+            "type":"value",
+            "byte":4,
+            "nbyte":2,
+            "div":10,
+            "unit":"mm"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":6,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":6,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "80":{
+      "1":"THR128/138, THC138",
+      "2":"THC238/268,THN132,THWR288,THRN122,THN122,AW129/131",
+      "3":"THWR800",
+      "4":"RTHN318",
+      "5":"La Crosse TX2, TX3, TX4, TX17",
+      "6":"TS15C",
+      "7":"Viking 02811",
+      "8":"La Crosse WS2300",
+      "9":"Rubicson",
+      "10":"TFA 30.3133",
+      "name":"Temperature sensors",
+      "length":8,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Temperature":{
+            "type":"value",
+            "byte":2,
+            "nbyte":2,
+            "sign":1,
+            "div":10,
+            "unit":"°C"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":4,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":4,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "81":{
+      "1":"LaCrosse TX3",
+      "2":"LaCrosse WS2300",
+      "name":"Humidity sensors",
+      "length":8,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Humidity":{
+            "type":"value",
+            "byte":2,
+            "unit":"%"
+         },
+         "Humidity Status":{
+            "type":"direct",
+            "byte":3,
+            "0":"Normal",
+            "1":"Comfort",
+            "2":"Dry",
+            "3":"Wet"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":4,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":4,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "82":{
+      "1":"THGN122/123, THGN132, THGR122/228/238/268",
+      "2":"THGR810, THGN800, THGR810",
+      "3":"RTGR328",
+      "4":"THGR328",
+      "5":"WTGR800",
+      "6":"THGR918/928, THGRN228, THGN500",
+      "7":"TFA TS34C, Cresta",
+      "8":"WT260,WT260H,WT440H,WT450,WT450H",
+      "9":"Viking 02035,02038",
+      "10":"Rubicson",
+      "11":"EW109",
+      "name":"Temperature and humidity sensors",
+      "length":10,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Temperature":{
+            "type":"value",
+            "byte":2,
+            "nbyte":2,
+            "sign":1,
+            "div":10,
+            "unit":"°C"
+         },
+         "Humidity":{
+            "type":"value",
+            "byte":4,
+            "unit":"%"
+         },
+         "Humidity Status":{
+            "type":"direct",
+            "byte":5,
+            "0":"Normal",
+            "1":"Comfort",
+            "2":"Dry",
+            "3":"Wet"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":6,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":6,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "83":{
+      "1":"Reserved for futur use",
+      "name":"Barometric sensors",
+      "length":9,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Barometric":{
+            "type":"value",
+            "byte":2,
+            "nbyte":2,
+            "unit":"hPa"
+         },
+         "Forecast":{
+            "type":"direct",
+            "byte":4,
+            "0":"No forecast available",
+            "1":"Sunny",
+            "2":"Partly cloudy",
+            "3":"Cloudy",
+            "4":"Rain"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":5,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":5,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "84":{
+      "1":"BTHR918",
+      "2":"BTHR918N, BTHR968",
+      "name":"Temperature, humidity and barometric sensors",
+      "length":13,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Temperature":{
+            "type":"value",
+            "byte":2,
+            "nbyte":2,
+            "sign":1,
+            "div":10,
+            "unit":"°C"
+         },
+         "Humidity":{
+            "type":"value",
+            "byte":4,
+            "unit":"%"
+         },
+         "Humidity Status":{
+            "type":"direct",
+            "byte":5,
+            "0":"Normal",
+            "1":"Comfort",
+            "2":"Dry",
+            "3":"Wet"
+         },
+         "Barometric":{
+            "type":"value",
+            "byte":6,
+            "nbyte":2,
+            "unit":"hPa"
+         },
+         "Forecast":{
+            "type":"direct",
+            "byte":8,
+            "0":"No forecast available",
+            "1":"Sunny",
+            "2":"Partly cloudy",
+            "3":"Cloudy",
+            "4":"Rain"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":9,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":9,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "85":{
+      "1":"RGR126/682/918/928",
+      "2":"PCR800",
+      "3":"TFA",
+      "4":"UPM RG700",
+      "5":"WS2300",
+      "6":"La Crosse TX5",
+      "name":"Rain sensors",
+      "length":11,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "RainRate":{
+            "comment":"Not valid for 2-PCR800",
+            "type":"value",
+            "byte":2,
+            "nbyte":2,
+            "unit":"mm/hr"
+         },
+         "RainTotal":{
+            "comment":"Not valid for 6-La Crosse TX5",
+            "type":"value",
+            "byte":4,
+            "nbyte":3,
+            "div":10,
+            "unit":"mm"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":7,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":7,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "86":{
+      "1":"WTGR800",
+      "2":"WGR800",
+      "3":"STR918, WGR918, WGR928",
+      "4":"TFA",
+      "5":"UPM WDS500",
+      "6":"WS2300",
+      "name":"Wind sensors",
+      "length":16,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Direction":{
+            "type":"value",
+            "byte":2,
+            "nbyte":2,
+            "unit":"°"
+         },
+         "Average Speed":{
+            "type":"value",
+            "byte":4,
+            "nbyte":2,
+            "div":10,
+            "unit":"m/s"
+         },
+         "Gust":{
+            "type":"value",
+            "byte":6,
+            "nbyte":2,
+            "div":10,
+            "unit":"m/s"
+         },
+         "Temperature":{
+            "type":"value",
+            "byte":8,
+            "nbyte":2,
+            "sign":1,
+            "div":10,
+            "unit":"°C"
+         },
+         "Temperature":{
+            "type":"value",
+            "byte":10,
+            "nbyte":2,
+            "sign":1,
+            "div":10,
+            "unit":"°C"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":12,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":12,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "87":{
+      "1":"UVN128, UV138",
+      "2":"UVN800",
+      "3":"TFA",
+      "name":"UV sensors",
+      "length":9,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "UV":{
+            "type":"value",
+            "byte":2
+         },
+         "Temperature":{
+            "type":"value",
+            "byte":3,
+            "nbyte":2,
+            "sign":1,
+            "div":10,
+            "unit":"°C"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":5,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":5,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "88":{
+      "1":"RTGR328N",
+      "name":"Date/time sensors",
+      "length":13,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Year":{
+            "type":"value",
+            "byte":2
+         },
+         "Month":{
+            "type":"value",
+            "byte":3
+         },
+         "Day":{
+            "type":"value",
+            "byte":4
+         },
+         "Day of week":{
+            "type":"value",
+            "byte":5
+         },
+         "Hour":{
+            "type":"value",
+            "byte":6
+         },
+         "Minute":{
+            "type":"value",
+            "byte":7
+         },
+         "Second":{
+            "type":"value",
+            "byte":8
+         },
+         "Battery":{
+            "type":"value",
+            "byte":9,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":9,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "89":{
+      "1":"CM113, Electrisave, cent-a-meter",
+      "name":"Current sensors",
+      "length":13,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Count":{
+            "type":"value",
+            "byte":2
+         },
+         "Channel1":{
+            "type":"value",
+            "byte":3,
+            "nbyte":2,
+            "div":10,
+            "unit":"A"
+         },
+         "Channel2":{
+            "type":"value",
+            "byte":5,
+            "nbyte":2,
+            "div":10,
+            "unit":"A"
+         },
+         "Channel3":{
+            "type":"value",
+            "byte":7,
+            "nbyte":2,
+            "div":10,
+            "unit":"A"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":9,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":9,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "90":{
+      "1":"CM119/160",
+      "2":"CM180",
+      "name":"Energy usage sensors",
+      "length":17,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Count":{
+            "type":"value",
+            "byte":2
+         },
+         "Instant":{
+            "type":"value",
+            "byte":3,
+            "nbyte":4,
+            "unit":"W"
+         },
+         "Total":{
+            "type":"value",
+            "byte":7,
+            "nbyte":6,
+            "div":223.666,
+            "unit":"Wh"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":13,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":13,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "91":{
+      "1":"CM180i",
+      "name":"Current + ENERGY sensors",
+      "length":19,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Count":{
+            "type":"value",
+            "byte":2
+         },
+         "Channel1":{
+            "type":"value",
+            "byte":3,
+            "nbyte":2,
+            "div":10,
+            "unit":"A"
+         },
+         "Channel2":{
+            "type":"value",
+            "byte":5,
+            "nbyte":2,
+            "div":10,
+            "unit":"A"
+         },
+         "Channel3":{
+            "type":"value",
+            "byte":7,
+            "nbyte":2,
+            "div":10,
+            "unit":"A"
+         },
+         "Total":{
+            "type":"value",
+            "byte":9,
+            "nbyte":6,
+            "div":223.666,
+            "unit":"Wh"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":15,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":15,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "92":{
+      "1":"Revolt",
+      "name":"Power sensors",
+      "length":15,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Voltage":{
+            "type":"value",
+            "byte":2,
+            "unit":"V"
+         },
+         "Current":{
+            "type":"value",
+            "byte":3,
+            "nbyte":2,
+            "div":100,
+            "unit":"A"
+         },
+         "Power":{
+            "type":"value",
+            "byte":5,
+            "nbyte":2,
+            "div":10,
+            "unit":"W"
+         },
+         "Energy":{
+            "type":"value",
+            "byte":7,
+            "nbyte":2,
+            "div":100,
+            "unit":"kWh"
+         },
+         "Power Factor":{
+            "type":"value",
+            "byte":9,
+            "div":100
+         },
+         "Frequency":{
+            "type":"value",
+            "byte":10,
+            "unit":"Hz"
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":11,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "93":{
+      "1":"BWR101/102",
+      "2":"GR101",
+      "name":"Weighting scale",
+      "length":8,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Weight":{
+            "type":"value",
+            "byte":2,
+            "nbyte":2,
+            "div":10,
+            "unit":"kg"
+         },
+         "Battery":{
+            "type":"value",
+            "byte":4,
+            "mask":15
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":4,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "94":{
+      "1":"Reserved for futur use",
+      "name":"Gas usage sensors",
+      "length":0,
+      "data":{
+
+      }
+   },
+   "95":{
+      "1":"Reserved for futur use",
+      "name":"Water usage sensors",
+      "length":0,
+      "data":{
+
+      }
+   },
+   "112":{
+      "0":"RFXSensor temperature",
+      "1":"RFXSensor A/D",
+      "2":"RFXSensor voltage",
+      "3":"RFXSensor message",
+      "name":"RFXsensor",
+      "length":7,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0
+         },
+         "Message":{
+            "type":"value",
+            "byte":1,
+            "nbyte":2
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":3,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "113":{
+      "0":"normal data packet",
+      "1":"new interval time set",
+      "2":"calibrate value",
+      "3":"new address set",
+      "4":"counter value reset mode",
+      "11":"counter value reset executed",
+      "12":"set interval",
+      "13":"calibration mode",
+      "14":"set address mode",
+      "15":"identification packet",
+      "name":"RFXMeter",
+      "length":10,
+      "data":{
+         "Id":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Count":{
+            "type":"value",
+            "byte":2,
+            "nbyte":4,
+            "unit":"Wh"
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":6,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "114":{
+      "0":"FS20",
+      "1":"FHT8V valve",
+      "2":"FHT80 door/window sensor",
+      "name":"FS20",
+      "length":9,
+      "data":{
+         "HouseCode":{
+            "type":"value",
+            "byte":0,
+            "nbyte":2
+         },
+         "Address":{
+            "type":"value",
+            "byte":2
+         },
+         "Command1":{
+            "type":"value",
+            "byte":3
+         },
+         "Command2":{
+            "type":"value",
+            "byte":4
+         },
+         "RSSI":{
+            "type":"value",
+            "byte":5,
+            "mask":240,
+            "rdecal":4
+         }
+      }
+   },
+   "128":{
+      "1":"Configure I/O lines",
+      "name":"I/O lines",
+      "length":5,
+      "data":{
+         "Direction/Mask":{
+            "type":"value",
+            "byte":0
+         },
+         "Pull Up/IO Value":{
+            "type":"value",
+            "byte":1
+         }
+      }
+   },
+   "version":"6.11",
+   "utype":"Unknow Type",
+   "ustype":"Unknow SubType",
+   "udval":"Unknow Value"
+}
