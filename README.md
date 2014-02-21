@@ -1,7 +1,7 @@
 node-rfxcomdecode
 =================
-Evented communication with RFXtrx433.
-=====================================
+
+Thanks to 
 
 How to Use
 ==========
