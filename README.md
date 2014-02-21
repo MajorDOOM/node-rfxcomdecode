@@ -1,7 +1,7 @@
 node-rfxcomdecode
 =================
 
-Thanks to Kevin McDermott [bigkevmcd] for the intial project node-rfxcom
+Thanks to Kevin McDermott [bigkevmcd](https://github.com/bigkevmcd) for the intial project node-rfxcom
 
 How to Use
 ==========
