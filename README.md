@@ -12,7 +12,7 @@ To install
 ----------
 
 <pre>
-  npm install rfxcomdeceode //Not Yet
+  npm install rfxcomdeceode
 </pre>
 
 The only dependency is serialport 1.0.6+.
