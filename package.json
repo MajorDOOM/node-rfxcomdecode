@@ -1,7 +1,7 @@
 {
   "name": "rfxcomdecode",
-  "version": "0.1.0",
-  "description": "Reports the approximate time ago in words from a specific past date",
+  "version": "0.1.1",
+  "description": "Node.js client for talking to an RFXtrx433 device",
   "keywords": [
     "rfxcom",
     "rfxtrx433",
