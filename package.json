@@ -1,0 +1,28 @@
+{
+  "name": "rfxcomdecode",
+  "version": "0.1",
+  "description": "Reports the approximate time ago in words from a specific past date",
+  "keywords": [
+    "rfxcom",
+    "rfxtrx433",
+    "serialport",
+    "decoder"
+  ],
+  "author": {
+    "name": "MajorDOOM",
+    "email": "majordoom at hotmail dot com"
+  },
+  "license": "GPLv3",
+  "homepage": "https://github.com/MajorDOOM/node-rfxcomdecode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MajorDOOM/node-rfxcomdecode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MajorDOOM/node-rfxcomdecode/issues"
+  },
+  "main": "rfxcom.js",
+  "dependencies": {
+    "serialport": "~1.1.0"
+  }
+}
