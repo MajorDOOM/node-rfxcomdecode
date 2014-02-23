@@ -227,7 +227,7 @@
             "type":"value",
             "byte":0
          },
-         "Unitcode":{
+         "UnitCode":{
             "type":"value",
             "byte":1
          },
@@ -263,7 +263,7 @@
             "byte":0,
             "nbyte":4
          },
-         "Unitcode":{
+         "UnitCode":{
             "type":"value",
             "byte":4
          },
