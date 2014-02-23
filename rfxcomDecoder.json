@@ -223,7 +223,7 @@
       "name":"Lighting1",
       "length":7,
       "data":{
-         "Housecode":{
+         "HouseCode":{
             "type":"value",
             "byte":0
          },
