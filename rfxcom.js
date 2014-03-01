@@ -74,7 +74,10 @@ function rfxcom() {
 		self.serialport.on("end", function() {
 			self.emit("end");
 		});
-		self.serialport.open();
+      setInterval(function() {
+         self.serialport.open();
+         clearInterval(this);},500);      
+		
 	};
 
 }
