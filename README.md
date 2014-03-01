@@ -24,9 +24,26 @@ To Use
 	var rfxcom = require("rfxcomdecode");
 	
 	rfxcom.on("open", function () {
-	  rfxcom.on('data', function(data) {
-		  console.log('[RFXCOM] Data : ' + data.toString());
+	  rfxcom.on('data', function(dataanalyse) {
+		  console.log('[RFXCOM] Data : ' + dataanalyse.toString());
 	  });
+	  /* 
+	   dataanalyse is composed : 
+		.raw       
+		.length		
+		.packetType
+		.subType	 
+		.seqNbr		
+		.extra     
+		.exist
+
+		.str_packetType 
+		.str_subType    
+		.analyse
+			...
+		.toString()
+	  */
+	  
 	});
 	rfxcom.on("close", function () {
 		 console.log('[RFXCOM] Closed');
@@ -34,52 +51,14 @@ To Use
 	rfxcom.on("end", function () {
 		 console.log('[RFXCOM] Connection close');
 	});	
-	rfxcom.on("error", function (err) {
-		 console.log('[RFXCOM] Error : '+err);
+	rfxcom.on("error", function (data) {
+		 console.log('[RFXCOM] Error : '+data);
 	});
-	rfxcom.on("status", function (info) {
-		 console.log('[RFXCOM] Status : '+info);
+	rfxcom.on("status", function (data) {
+		 console.log('[RFXCOM] Status : '+data);
 	});
-	rfxcom.on("raw", function (rawdata) {
-		 console.log('[RFXCOM] RAW : '+rawdata);
+	rfxcom.on("raw", function (data) {
+		 console.log('[RFXCOM] RAW : '+data);
 	});	
 	rfxcom.open('/dev/ttyUSB0');
 </pre>
-
-data variable of data events
-----------------------------
-
-rfxcomdata
-   .raw       
-   .length		
-   .packetType
-   .subType	 
-   .seqNbr		
-   .extra     
-   .exist
-   .str_packetType 
-   .str_subType    
-   .analyse 
-       .variable1:{toString:"",value:""},
-       .variable2:{toString:"",value:""},
-       ...
-   .toString()
-
-raw variable of raw events
-----------------------------
-
-raw is an array of each raw data byte
-   .raw       
-   .length		
-   .packetType
-   .subType	 
-   .seqNbr		
-   .extra     
-   .exist
-   .str_packetType 
-   .str_subType    
-   .analyse 
-       .variable1:{toString:"",value:""},
-       .variable2:{toString:"",value:""},
-       ...
-   .toString()
