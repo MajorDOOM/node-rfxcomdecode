@@ -26,6 +26,7 @@ function analyse(data) {
          switch(datakey.type) {
             case "direct":
                ret[key].value = data.extra[nbyte];
+               ret[key].intdiv = 1;
                if (isset(datakey[data.extra[nbyte]])) ret[key].toString=datakey[data.extra[nbyte]];
                else ret[key].toString = typeRfxcom.udval;
                break;
@@ -48,12 +49,15 @@ function analyse(data) {
                   val+=(((data.extra[nbyte+i] & datakey.mask) >> datakey.rdecal)*Math.pow(256,datakey.nbyte-i-1))/datakey.div*datakey.signval;
                }
                ret[key].value=val;
+               ret[key].intdiv = datakey.div;               
                ret[key].toString=str_replace_adv(datakey.value,val,datakey.unit);
                break;
             case "bit":
                for (var i=0;i<8;i++) {
                   if (isset(datakey[i])) ret[key][datakey[i]]=getbit(data.extra[nbyte],i);
                }
+               ret[key].value=data.extra[nbyte];
+               ret[key].intdiv = 1;                 
                break;
          }
       }
