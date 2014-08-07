@@ -16,6 +16,21 @@ function str_replace_adv(str,value,unit) {
    str = str.replace(/%u/g,unit);
    return str
 }
+function round(value, precision, mode) {
+  var m, f, isHalf, sgn;
+  precision |= 0;
+  m = Math.pow(10, precision);
+  value *= m;
+  sgn = (value > 0) | -(value < 0);
+  isHalf = value % 1 === 0.5 * sgn;
+  f = Math.floor(value);
+
+  if (isHalf) value = f + (sgn > 0);
+
+  return (isHalf ? value : Math.round(value)) / m;
+}
+
+
 function analyse(data) {
    var ret={};
 	if (data.exist) {
@@ -48,7 +63,7 @@ function analyse(data) {
                for (var i=0;i<datakey.nbyte;i++) {
                   val+=(((data.extra[nbyte+i] & datakey.mask) >> datakey.rdecal)*Math.pow(256,datakey.nbyte-i-1))/datakey.div*datakey.signval;
                }
-               ret[key].value=val;
+               ret[key].value=round(val,2);
                ret[key].intdiv = datakey.div;               
                ret[key].toString=str_replace_adv(datakey.value,val,datakey.unit);
                break;
