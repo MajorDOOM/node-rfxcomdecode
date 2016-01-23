@@ -42,6 +42,7 @@ function analyse(data) {
             case "direct":
                ret[key].value = data.extra[nbyte];
                ret[key].intdiv = 1;
+               ret[key].unit = "";
                if (isset(datakey[data.extra[nbyte]])) ret[key].toString=datakey[data.extra[nbyte]];
                else ret[key].toString = typeRfxcom.udval;
                break;
@@ -65,6 +66,7 @@ function analyse(data) {
                }
                ret[key].value=round(val,2);
                ret[key].intdiv = datakey.div;               
+               ret[key].unit = datakey.unit;
                ret[key].toString=str_replace_adv(datakey.value,val,datakey.unit);
                break;
             case "bit":
@@ -73,6 +75,7 @@ function analyse(data) {
                }
                ret[key].value=data.extra[nbyte];
                ret[key].intdiv = 1;                 
+               ret[key].unit = "";
                break;
          }
       }
