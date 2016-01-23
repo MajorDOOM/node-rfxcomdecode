@@ -1,6 +1,6 @@
 {
   "name": "rfxcomdecode",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Node.js client for talking to an RFXtrx433 device",
   "keywords": [
     "rfxcom",
@@ -23,6 +23,6 @@
   },
   "main": "rfxcom.js",
   "dependencies": {
-    "serialport": "~1.1.0"
+    "serialport": "*"
   }
 }
