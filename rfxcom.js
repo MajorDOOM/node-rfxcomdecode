@@ -1,4 +1,4 @@
-var SerialPort = require("serialport").SerialPort;
+var SerialPort = require("serialport");
 var EventEmitter = require('events').EventEmitter;
 var Decoder = require('./rfxcomDecoder.js');
 var util = require('util');
@@ -58,8 +58,9 @@ function rfxcom() {
 	rfxcom.prototype.open = function (serialport) {
 		self.serialport = new SerialPort(serialport, {
 			baudrate: 38400,
+			autoOpen:false,
 			parser: self.rfxtrxParser()
-		},false);
+		});
 		self.serialport.on("open", function() {
 			self.emit("open");
 			self.initialize();
